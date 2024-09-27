@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Converter</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Upload de Arquivo</title>
 </head>
 <body>
-    <h1>Upload Your File</h1>
-    <form action="/upload" method="POST" enctype="multipart/form-data">
+    <h1>Upload de Arquivo</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
         <input type="file" name="file" required>
-        <button type="submit">Convert</button>
+        <br>
+        <label for="output_name">Nome do arquivo convertido:</label>
+        <input type="text" id="output_name" name="output_name" required>
+        <br>
+        <button type="submit">Enviar</button>
     </form>
 </body>
 </html>
